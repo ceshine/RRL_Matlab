@@ -32,7 +32,7 @@ function [ J, grad ] = costFunction( Xn, X, theta)
     A = sum(Ret) / T;
     B = sum(Ret.*Ret) / T;
 
-    prefix = repmat(subs(subs(dSdA,a,A),b,B), T, 1) + subs(subs(dSdB,a,A),b,B)*2*Ret/T;
+    prefix = repmat(subs(subs(dSdA,a,A),b,B), T, 1)/T + subs(subs(dSdB,a,A),b,B)*2*Ret/T;
     %prefix = repmat((1/(- A^2 + B)^(1/2) + A^2/(B - A^2)^(3/2))/M, M, 1) + (-A/(2*(B - A^2)^(3/2))) * 2 * Ret / M
     %prefix = ones(M,1)
     
