@@ -3,7 +3,7 @@ load('retDAX.txt')
 load('DAX.txt')
 
 M = 10; 
-T = 1000; % The number of time series inputs to the trader
+T = 500; % The number of time series inputs to the trader
 N = 100;
 
  
@@ -25,7 +25,7 @@ Xn = featureNormalize(X);
  %plot(U_history)
 
  %  Set options for fminunc
-options = optimset('GradObj', 'on', 'MaxIter', 100);
+options = optimset('GradObj', 'on', 'MaxIter', 1000, 'PlotFcns', @optimplotfval);
 
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
@@ -54,9 +54,11 @@ subplot(3,1,3);
 plot(Ret(:));
 axis([0, length(Ret), min(Ret), max(Ret)]);
  
+pause;
+
  %Ft(T:T+N)
  
- pI = 10;
+ pI = 1;
  Ret = zeros(pI*N, 1);
  %size(Ret)
  Ft = zeros(pI*N, 1);
