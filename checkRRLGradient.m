@@ -3,7 +3,7 @@ load('retDAX.txt')
 load('DAX.txt')
 
 M = 10; 
-T = 100; % The number of time series inputs to the trader
+T = 1000; % The number of time series inputs to the trader
 
 X = retDAX(1:M+T); % truncate input data
 
