@@ -1,5 +1,8 @@
-Recurrenct Reinforcement Learning Implementation using Matlab/Octave
+Recurrent Reinforcement Learning Implementation using Matlab/Octave
 ================================
+
+20210321 Update: A PyTorch-port of this repo is available at [ceshine/RRL_PyTorch](https://github.com/ceshine/RRL_PyTorch).
+
 Reference: [Stock Trading with Recurrent Reinforcement Learning (RRL) By Gabriel Molina]
 
 File Description
